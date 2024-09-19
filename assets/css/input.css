@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply relative bg-stone-900
+}
+.red{
+    @apply absolute left-0 h-screen bg-red-700 w-0 transition-all
+
+}
+.red.active{
+    @apply  bg-red-700 w-[500px] duration-700 ease-in
+
+}
+.white{
+    @apply absolute left-0 h-screen bg-white w-0 transition-all
+
+}
+.white.active{
+    @apply  w-[450px] bg-white   duration-700 ease-in
+}
+.black{
+    @apply absolute left-0 h-screen bg-stone-800 w-0 text-white flex justify-center items-center transition-all overflow-hidden
+}
+.black.active{
+    @apply  w-[400px] duration-700 ease-in
+}
+.black.active  ul li{
+    @apply   duration-1000 ease-in opacity-100 delay-1000
+}
+.black ul li{
+    @apply mb-6 font-bold relative opacity-0 transition-all 
+}
+.black ul li::after{
+    @apply w-0 h-[3px] bg-red-700 absolute -bottom-[4px] left-0 ease-in duration-500 transition-all  ;
+    content: '';
+}
+.black ul li:hover::after{
+    @apply w-24 h-[3px] bg-red-700   ;
+    content: '';
+}
+.fa-bars{
+    @apply top-7 left-16 absolute shadow-lg shadow-zinc-700 bg-white rounded-md p-5 text-xl text-black
+}
+.fa-times{
+    @apply top-7 left-6 absolute  rounded-md p-5 text-2xl
+}
